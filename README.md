@@ -40,6 +40,44 @@ A robust relational database project for movies and awards, inspired by the stru
 | **Award\_Nominations** | Nominations & wins: `nomination_id` (PK), `ceremony_id` (FK), `category_id` (FK), `movie_id` (FK), `director_id` (FK), `star_id` (FK), `won` (bool) |
 
 
-## Streamlit Interface
+## 🖥️ Streamlit User Interface
 
-Created Streamlit interface to interact with database, shows movies their information and allows filtering and adding movies to database.
+An interactive Streamlit web application is provided for browsing, searching, and managing your movie database.
+This dashboard connects directly to the MySQL backend and supports both data visualization and entry.
+
+✨ Key Features
+Catalog & Search:
+Browse movies in a responsive grid, filter by title, year, genre, director, cast, and more.
+
+Sorting & Pagination:
+Sort movies by title, year, rating, or vote count; view results with clean pagination.
+
+Movie Details:
+View detailed movie pages with poster, stats, genres, cast, crew, production companies, and overview.
+
+High-Resolution Posters:
+Optional integration with TMDB API to fetch high-res movie posters.
+
+Add New Movies:
+Fill out a form to add a new movie with associated genres, cast, crew, and production info.
+All necessary join-table records (e.g., Movie_Stars, Movie_Genres, etc.) are created automatically.
+
+Modern Look:
+Custom CSS styling for a clean, modern dashboard appearance.
+
+🚀 How It Works
+Backend:
+
+Connects to the MySQL database using mysql-connector-python.
+
+Supports full CRUD for movies (currently, UI enables adding movies and viewing all details).
+
+Ensures all many-to-many relationships (genres, stars, producers, composers, companies) are correctly handled.
+
+Frontend:
+
+Written entirely in Python with Streamlit, no HTML/JS required.
+
+Instant UI updates with cache invalidation after data changes.
+
+Sidebar for navigation, filters, and sorting controls.
